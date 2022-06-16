@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="box_buscar">
+        <img class="logotipo" src="assets/pokedex.png">
+        <div class="form-group">
+            <label>Busca tu pokemon</label>
+            <input class="form-control" type="text" (ngModelChange)="getItems($event)" placeholder="Buscar..." [(ngModel)]="buscar" name="buscar" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
+        </div>
+    
+        <ul *ngIf="buscar">
+            <li *ngFor="let pokemon of pokeNamesFilters" (click)="verInfo(pokemon)" >
+                <a>{{pokemon}}</a>
+            </li>
+        </ul>
+        <div class="historial"><span *ngFor="let pokemon of historialPokemon" (click)="verInfo(pokemon)">{{pokemon}}</span></div>
+    </div>
+    
+
+    <div class="box" *ngIf="pokemon">
+        <div class="info">
+            <img [src]="pokemon.img">
+            <span class="name">{{pokemon.name}}</span>
+            <span><strong>ID:</strong> {{pokemon.id}}</span>
+            <span *ngFor="let tipo of pokemon.types; let i = index"><strong>Tipo {{i+1}}:</strong> {{tipo.type.name}}</span>
+        </div>
+    </div>
+</div>

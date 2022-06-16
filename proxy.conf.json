@@ -1,0 +1,8 @@
+{
+    "/APIgurami":{
+        "target":"https://gurami.com.mx",
+        "secure":false,
+        "logLevel":"debug",
+        "changeOrigin": true
+    }
+}
