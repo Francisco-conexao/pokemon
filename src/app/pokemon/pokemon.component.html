@@ -18,7 +18,7 @@
     <div class="box" *ngIf="pokemon">
         <div class="info">
             <img [src]="pokemon.img">
-            <span class="name">{{pokemon.name}}</span>
+            <span class="name">Nombre: {{pokemon.name}}</span>
             <span><strong>ID:</strong> {{pokemon.id}}</span>
             <span *ngFor="let tipo of pokemon.types; let i = index"><strong>Tipo {{i+1}}:</strong> {{tipo.type.name}}</span>
         </div>
