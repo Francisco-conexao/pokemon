@@ -82,7 +82,8 @@
         border-radius: 20px;
         float: left;
         width: 100%;
-        padding: 15px;
+        padding: 35px;
+        margin-bottom: 30px;
         img{
             width: 100%;
             float: left;
@@ -93,6 +94,7 @@
             width: 100%;
             text-align: center;
             color: #fff;
+            
         }
         .name{
             font-size: 30px;
@@ -100,6 +102,7 @@
             margin-bottom: 10px;
             text-transform: capitalize;
             color: #fff;
+            margin-top: 20px;
         }
     }
 }
