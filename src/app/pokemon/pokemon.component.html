@@ -5,7 +5,7 @@
             <label>Busca tu pokemon</label>
             <input class="form-control" type="text" (ngModelChange)="getItems($event)" placeholder="Buscar pokemon..." [(ngModel)]="buscar" name="buscar" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))">
         </div>
-    
+        <p class="text_anteriores">Pokemon buscados anterior mente</p>
         <ul *ngIf="buscar">
             <li *ngFor="let pokemon of pokeNamesFilters" (click)="verInfo(pokemon)" >
                 <a>{{pokemon}}</a>
